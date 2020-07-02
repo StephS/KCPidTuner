@@ -49,12 +49,12 @@ s = cm.tf('s')
 #PIDref = np.dot(0.9, (1 + 1 / (np.dot(4.5, s)) + np.dot(1.111, s)))  # poorly damped;
 
 # TestKCtuner.m:10 # 7 Sys=1/(s+1)^5; PIDref=0.7*0.921*(1+1/(1.961*s)+1.969*s); #Chen example A
-#Sys = 1 / (s + 1) ** 5
-#PIDref=np.dot(np.dot(0.7,0.921),(1 + 1 / (np.dot(1.961,s)) + np.dot(1.969,s)))
+Sys = 1 / (s + 1) ** 5
+PIDref=np.dot(np.dot(0.7,0.921),(1 + 1 / (np.dot(1.961,s)) + np.dot(1.969,s)))
 
 # TestKCtuner.m:11 # 8 Sys=1/(s*(s+1)^3); PIDref=0.33*(1+1/(6.53*s)+1.89*s); #Chen example B
-Sys = 1 / (np.dot(s, (s + 1) ** 3))  # Chen example B
-PIDref = np.dot(0.33, (1 + 1 / (np.dot(6.53, s)) + np.dot(1.89, s)))  # Chen example B
+#Sys = 1 / (np.dot(s, (s + 1) ** 3))  # Chen example B
+#PIDref = np.dot(0.33, (1 + 1 / (np.dot(6.53, s)) + np.dot(1.89, s)))  # Chen example B
 
 # TestKCtuner.m:12 # 9 Sys=exp(-s)/(s+1)^3; PIDref=1.024*(1+1/(1.241*s)+1.539*s); #Chen example C
 #Sys = np.exp( np.dot(-1, s)) / (s + 1) ** 3  # Chen example C
